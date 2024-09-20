@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGoodAssetService", "PlayGoodService\PlayGoodAssetService.csproj", "{340FD011-E05E-4DB1-96E0-1381C1D3B022}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGoodAssetService.Test", "PlayGoodAssetService.Test\PlayGoodAssetService.Test.csproj", "{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{340FD011-E05E-4DB1-96E0-1381C1D3B022}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{340FD011-E05E-4DB1-96E0-1381C1D3B022}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{340FD011-E05E-4DB1-96E0-1381C1D3B022}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{340FD011-E05E-4DB1-96E0-1381C1D3B022}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9B0B2508-1923-44E2-8949-0E78A192E938}
+	EndGlobalSection
+EndGlobal
