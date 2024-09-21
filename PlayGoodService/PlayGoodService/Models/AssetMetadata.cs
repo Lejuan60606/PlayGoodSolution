@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace PlayGoodAssetService.Models
 {
     public class AssetMetadata
     {
+        [Key]
+        [Required]
         public string AssetId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }

@@ -11,5 +11,8 @@ namespace PlayGoodAssetService.Repositories
     {
         Task<IEnumerable<AssetMetadata>> GetAllAssetsAsync();
         Task<AssetMetadata> GetAssetByIdAsync(string assetId);
+        Task AddAssetAsync(AssetMetadata asset);
+        Task UpdateAssetAsync(AssetMetadata asset);
+        Task DeleteAssetAsync(string assetId);
     }
 }
