@@ -55,6 +55,15 @@ namespace PlayGoodAssetService.Services
         public async Task DeleteAssetAsync(string assetId)
         {
             _logger.LogInformation($"Deleting asset {assetId}");
+
+            var existingAsset =  await _repository.GetAssetByIdAsync(assetId);
+
+            if (existingAsset == null)
+            {
+                _logger.LogWarning($"Asset {assetId} not found for update.");
+                throw new KeyNotFoundException("Asset not found.");
+            }
+
             await _repository.DeleteAssetAsync(assetId);
         }
     }
