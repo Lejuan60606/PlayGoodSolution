@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
-using PlayGoodAssetService.Security;
+using PlayGoodService.Security;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace PlayGoodAssetService.Controllers
+namespace PlayGoodService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

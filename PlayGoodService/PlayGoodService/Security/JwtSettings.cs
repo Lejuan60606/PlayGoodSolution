@@ -1,4 +1,4 @@
-﻿namespace PlayGoodAssetService.Security
+﻿namespace PlayGoodService.Security
 {
     public class JwtSettings
     {

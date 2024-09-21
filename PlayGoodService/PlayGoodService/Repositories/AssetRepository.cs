@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PlayGoodAssetService.Data;
-using PlayGoodAssetService.Models;
+using PlayGoodService.Data;
+using PlayGoodService.Models;
 
-namespace PlayGoodAssetService.Repositories
+namespace PlayGoodService.Repositories
 {
     internal class AssetRepository : IAssetRepository
     {
@@ -21,7 +21,7 @@ namespace PlayGoodAssetService.Repositories
             try
             {
                 _logger.LogInformation("Fetching all assets from the database.");
-                var assetsMetadata = await _context.AssetMetadata.ToListAsync();
+                var assetsMetadata = await _context.AssetMetadatas.ToListAsync();
                 _logger.LogInformation($"Successfully retrieved {assetsMetadata.Count} assets metadata.", assetsMetadata.Count);
                 return assetsMetadata;
             }
@@ -37,7 +37,7 @@ namespace PlayGoodAssetService.Repositories
             try
             {
                 _logger.LogInformation($"Fetching asset {assetMetadataId}.");
-                var assetMetadata = await _context.AssetMetadata.FindAsync(assetMetadataId);
+                var assetMetadata = await _context.AssetMetadatas.FindAsync(assetMetadataId);
 
                 if (assetMetadata == null)
                 {
@@ -62,7 +62,7 @@ namespace PlayGoodAssetService.Repositories
             try
             {
                 _logger.LogInformation($"Adding a new asset {assetMetadata.AssetId} to the database.");
-                await _context.AssetMetadata.AddAsync(assetMetadata);
+                await _context.AssetMetadatas.AddAsync(assetMetadata);
                 await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successfully added asset metadata {assetMetadata.AssetId}.");
             }
@@ -78,7 +78,7 @@ namespace PlayGoodAssetService.Repositories
             try
             {
                 _logger.LogInformation($"Updating asset with ID {assetMetadata.AssetId}.");
-                _context.AssetMetadata.Update(assetMetadata);
+                _context.AssetMetadatas.Update(assetMetadata);
                 await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successfully updated asset with ID {assetMetadata.AssetId}.");
             }
@@ -94,11 +94,11 @@ namespace PlayGoodAssetService.Repositories
             try
             {
                 _logger.LogInformation($"Attempting to delete asset {assetId} metadata.");
-                var assetMetadata = await _context.AssetMetadata.FindAsync(assetId);
+                var assetMetadata = await _context.AssetMetadatas.FindAsync(assetId);
 
                 if (assetMetadata != null)
                 {
-                    _context.AssetMetadata.Remove(assetMetadata);
+                    _context.AssetMetadatas.Remove(assetMetadata);
                     await _context.SaveChangesAsync();
                     _logger.LogInformation($"Attempting to delete asset {assetId} metadata.");
                 }

@@ -1,7 +1,7 @@
 ﻿
 using FluentValidation.TestHelper;
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Validator;
+using PlayGoodService.Models;
+using PlayGoodService.Validator;
 
 namespace PlayGoodService.Test
 {

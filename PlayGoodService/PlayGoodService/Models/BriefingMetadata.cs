@@ -1,8 +1,12 @@
 ﻿
-namespace PlayGoodAssetService.Models
+using System.ComponentModel.DataAnnotations;
+
+namespace PlayGoodService.Models
 {
-    internal class BriefingMetadata
+    public class BriefingMetadata
     {
+        [Key]
+        [Required]
         public string AssetId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }     

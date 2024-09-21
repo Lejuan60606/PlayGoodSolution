@@ -1,12 +1,14 @@
-﻿using PlayGoodAssetService.Data;
-using PlayGoodAssetService.Repositories;
-using PlayGoodAssetService.Services;
+﻿using PlayGoodService.Data;
+using PlayGoodService.Repositories;
+using PlayGoodService.Services;
 using Microsoft.EntityFrameworkCore;
 using FluentValidation.AspNetCore;
-using PlayGoodAssetService.Security;
+using PlayGoodService.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using PlayGoodBriefingService.Repositories;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,13 +20,19 @@ builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSet
 ConfigureJwtAuthentication(builder, jwtSettings);
 
 
-builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>()); ;
+builder.Services.AddControllers().AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<Program>())
+    .AddJsonOptions(x =>
+        x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.Preserve);
 
 builder.Services.AddDbContext<AssetAppDbContext>(options =>
     options.UseInMemoryDatabase("InMemoryDb"));
 
 builder.Services.AddScoped<IAssetRepository, AssetRepository>();
 builder.Services.AddScoped<IAssetService, AssetService>();
+builder.Services.AddScoped<IBriefingRepository, BriefingRepository>();
+builder.Services.AddScoped<IBriefingService, BriefingService>();
+builder.Services.AddScoped<IContentDistributionRepository, ContentDistributionRepository>();
+builder.Services.AddScoped<IContentDistributionService, ContentDistributionService>();
 
 builder.Services.AddHealthChecks();
 

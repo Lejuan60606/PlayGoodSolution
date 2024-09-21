@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Services;
-using System.Net;
+using PlayGoodService.Models;
+using PlayGoodService.Services;
 
-namespace PlayGoodAssetService.Controllers
+namespace PlayGoodService.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using PlayGoodAssetService.Models;
+using PlayGoodService.Models;
 
-namespace PlayGoodAssetService.Validator
+namespace PlayGoodService.Validator
 {
     public class AssetMetadataValidator : AbstractValidator<AssetMetadata>
     {

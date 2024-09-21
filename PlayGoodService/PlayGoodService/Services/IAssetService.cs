@@ -1,6 +1,6 @@
-﻿using PlayGoodAssetService.Models;
+﻿using PlayGoodService.Models;
 
-namespace PlayGoodAssetService.Services
+namespace PlayGoodService.Services
 {
     public interface IAssetService
     {

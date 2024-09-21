@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
-using PlayGoodAssetService.Controllers;
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Services;
+using PlayGoodService.Controllers;
+using PlayGoodService.Models;
+using PlayGoodService.Services;
 
 namespace PlayGoodService.Test
 {

@@ -1,8 +1,8 @@
 ﻿
 using Microsoft.Extensions.Logging;
 using Moq;
-using PlayGoodAssetService.Controllers;
-using PlayGoodAssetService.Security;
+using PlayGoodService.Controllers;
+using PlayGoodService.Security;
 
 namespace PlayGoodService.Test
 {

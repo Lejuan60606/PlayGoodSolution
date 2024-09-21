@@ -1,9 +1,9 @@
 ﻿using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Repositories;
-using PlayGoodAssetService.Services;
+using PlayGoodService.Models;
+using PlayGoodService.Repositories;
+using PlayGoodService.Services;
 
 namespace PlayGoodService.Test
 {

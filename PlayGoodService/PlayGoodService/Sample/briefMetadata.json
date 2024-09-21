@@ -1,0 +1,92 @@
+[
+  {
+    "name": "Millennium Falcon Concept Art",
+    "description": "High-resolution concept art of the Millennium Falcon spaceship used in the Star Wars films.",
+    "assetId": "ASSET001",
+    "createdBy": "John Doe",
+    "createdDate": "2023-07-03",
+    "status": "Released",
+    "comments": "Only one version released from 2."
+  },
+  {
+    "name": "Lightsaber Prop",
+    "description": "Photographs of a replica lightsaber prop used in Star Wars cosplay.",
+    "assetId": "ASSET002",
+    "createdBy": "Jane Smith",
+    "createdDate": "2023-07-04",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "Darth Vader Costume",
+    "description": "Images showcasing a detailed Darth Vader costume with helmet, cape, and armor.",
+    "assetId": "ASSET003",
+    "createdBy": "Mark Johnson",
+    "createdDate": "2023-07-05",
+    "status": "Released",
+    "comments": "Only one version released from 3 orderded, please see approval flow."
+  },
+  {
+    "name": "Star Wars Sound Effects",
+    "description": "A collection of iconic Star Wars sound effects in WAV format.",
+    "assetId": "ASSET004",
+    "createdBy": "Emily Wilson",
+    "createdDate": "2023-07-06",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "Star Wars Movie Poster",
+    "description": "A high-resolution poster featuring the characters and scenes from the Star Wars saga.",
+    "assetId": "ASSET005",
+    "createdBy": "David Brown",
+    "createdDate": "2023-07-06",
+    "status": "Released",
+    "comments": "Due to the short deadline only one version released."
+  },
+  {
+    "name": "Yoda 3D Model",
+    "description": "A 3D model of the character Yoda, suitable for animation and visual effects.",
+    "assetId": "ASSET006",
+    "createdBy": "Sarah Thompson",
+    "createdDate": "2023-07-10",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "Stormtrooper Helmet",
+    "description": "Photographs of a replica Stormtrooper helmet used in Star Wars fan events.",
+    "assetId": "ASSET007",
+    "createdBy": "Michael Davis",
+    "createdDate": "2023-07-10",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "Star Wars Music Score",
+    "description": "Sheet music and MIDI files for the iconic Star Wars theme music composed by John Williams.",
+    "assetId": "ASSET008",
+    "createdBy": "Amy Anderson",
+    "createdDate": "2023-07-12",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "BB-8 Toy",
+    "description": "Images of a remote-controlled BB-8 toy, a popular Star Wars merchandise item.",
+    "assetId": "ASSET009",
+    "createdBy": "Robert Wilson",
+    "createdDate": "2023-07-12",
+    "status": "Released",
+    "comments": ""
+  },
+  {
+    "name": "R2-D2 Wallpaper",
+    "description": "A high-resolution wallpaper featuring the astromech droid R2-D2.",
+    "assetId": "ASSET010",
+    "createdBy": "Laura Garcia",
+    "createdDate": "2023-07-13",
+    "status": "Released",
+    "comments": "From the two briefs requested only one is released."
+  }
+]

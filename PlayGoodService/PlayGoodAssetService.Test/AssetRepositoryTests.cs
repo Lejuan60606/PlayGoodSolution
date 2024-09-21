@@ -2,9 +2,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
-using PlayGoodAssetService.Data;
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Repositories;
+using PlayGoodService.Data;
+using PlayGoodService.Models;
+using PlayGoodService.Repositories;
 
 namespace PlayGoodService.Test
 {
@@ -73,7 +73,7 @@ namespace PlayGoodService.Test
                 }
             };
 
-            _context.AssetMetadata.AddRange(assets);
+            _context.AssetMetadatas.AddRange(assets);
             _context.SaveChanges();
         }
 

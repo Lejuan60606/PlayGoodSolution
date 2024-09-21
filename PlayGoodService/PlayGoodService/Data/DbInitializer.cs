@@ -1,32 +1,71 @@
 ﻿using Newtonsoft.Json;
-using PlayGoodAssetService.Models;
+using PlayGoodService.Models;
 
-namespace PlayGoodAssetService.Data
+namespace PlayGoodService.Data
 {
     internal class DbInitializer
     {
         public static void Initialize(AssetAppDbContext context)
         {
-            if (context.AssetMetadata.Any())
+            if (!context.AssetMetadatas.Any())
             {
-                return; 
+                try
+                {
+                    var assetData = File.ReadAllText("Sample/assetMetadata.json");
+                    var assets = JsonConvert.DeserializeObject<List<AssetMetadata>>(assetData);
+
+                    if (assets != null && assets.Any())
+                    {
+                        context.AssetMetadatas.AddRange(assets);
+                        Console.WriteLine("AssetMetadatas seeded successfully.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error seeding AssetMetadatas: {ex.Message}");
+                }
             }
 
-            var assetData = File.ReadAllText("Data/assetMetadata.json");
-            var assets = JsonConvert.DeserializeObject<List<AssetMetadata>>(assetData);
-            context.AssetMetadata.AddRange(assets);
+            if (!context.BriefingMetadatas.Any())
+            {
+                try
+                {
+                    var briefData = File.ReadAllText("Sample/briefMetadata.json");
+                    var briefs = JsonConvert.DeserializeObject<List<BriefingMetadata>>(briefData);
 
-            //var briefData = File.ReadAllText("Data/briefMetadata.json");
-            //var briefs = JsonConvert.DeserializeObject<List<BriefMetadata>>(briefData);
-            //context.Briefs.AddRange(briefs);
+                    if (briefs != null && briefs.Any())
+                    {
+                        context.BriefingMetadatas.AddRange(briefs);
+                        Console.WriteLine("BriefingMetadatas seeded successfully.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error seeding BriefingMetadatas: {ex.Message}");
+                }
+            }
 
-            //var contentDistributionData = File.ReadAllText("Data/contentDistributionMetadata.json");
-            //var contentDistributions = JsonConvert.DeserializeObject<ContentDistributionMetadata>(contentDistributionData);
-            //context.ContentDistributions.Add(contentDistributions);
+            if (!context.ContentDistributionMetadatas.Any())
+            {
+                try
+                {
+                    var contentDistributionData = File.ReadAllText("Sample/contentDistributionMetadata.json");
+                    var contentDistribution = JsonConvert.DeserializeObject<List<ContentDistribution>>(contentDistributionData);
+
+                    if (contentDistribution != null)
+                    {
+                        context.ContentDistributionMetadatas.AddRange(contentDistribution);
+                        Console.WriteLine("ContentDistributionMetadata seeded successfully.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error seeding ContentDistributionMetadatas: {ex.Message}");
+                }
+            }
 
             context.SaveChanges();
 
-            context.SaveChanges();
         }
     }
 }

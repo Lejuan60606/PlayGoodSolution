@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PlayGoodAssetService.Models
+namespace PlayGoodService.Models
 {
     public class AssetMetadata
     {

@@ -1,8 +1,8 @@
 ﻿
-using PlayGoodAssetService.Models;
-using PlayGoodAssetService.Repositories;
+using PlayGoodService.Models;
+using PlayGoodService.Repositories;
 
-namespace PlayGoodAssetService.Services
+namespace PlayGoodService.Services
 {
     internal class AssetService : IAssetService
     {
