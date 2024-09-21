@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PlayGoodService\PlayGoodAssetService.csproj" />
+    <ProjectReference Include="..\PlayGoodService\PlayGoodService.csproj" />
   </ItemGroup>
 
   <ItemGroup>

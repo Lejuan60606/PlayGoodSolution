@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGoodAssetService", "PlayGoodService\PlayGoodAssetService.csproj", "{340FD011-E05E-4DB1-96E0-1381C1D3B022}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGoodService", "PlayGoodService\PlayGoodService.csproj", "{340FD011-E05E-4DB1-96E0-1381C1D3B022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayGoodAssetService.Test", "PlayGoodAssetService.Test\PlayGoodAssetService.Test.csproj", "{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlayGoodService.Test", "PlayGoodAssetService.Test\PlayGoodService.Test.csproj", "{3032540B-5845-4EA4-9B01-43B5EF0FC9B5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
