@@ -77,8 +77,7 @@ namespace PlayGoodBriefingService.Repositories
         {
             try
             {
-                _logger.LogInformation($"Updating Briefing with ID {BriefingMetadata.AssetId}.");
-                _context.BriefingMetadatas.Update(BriefingMetadata);
+                _logger.LogInformation($"Updating Briefing with ID {BriefingMetadata.AssetId}.");            
                 await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successfully updated Briefing with ID {BriefingMetadata.AssetId}.");
             }

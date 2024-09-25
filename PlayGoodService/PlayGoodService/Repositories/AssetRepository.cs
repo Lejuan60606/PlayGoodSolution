@@ -77,8 +77,7 @@ namespace PlayGoodService.Repositories
         {
             try
             {
-                _logger.LogInformation($"Updating asset with ID {assetMetadata.AssetId}.");
-                _context.AssetMetadatas.Update(assetMetadata);
+                _logger.LogInformation($"Updating asset with ID {assetMetadata.AssetId}.");      
                 await _context.SaveChangesAsync();
                 _logger.LogInformation($"Successfully updated asset with ID {assetMetadata.AssetId}.");
             }

@@ -1,4 +1,5 @@
 ﻿
+using Microsoft.EntityFrameworkCore;
 using PlayGoodService.Models;
 using PlayGoodService.Repositories;
 
@@ -48,8 +49,10 @@ namespace PlayGoodService.Services
                 throw new KeyNotFoundException("Asset not found.");
             }
 
+            UpdateAssetFields(existingAsset, asset);
+
             _logger.LogInformation($"Updating asset {assetId}");
-            await _repository.UpdateAssetAsync(asset);
+            await _repository.UpdateAssetAsync(existingAsset);
         }
 
         public async Task DeleteAssetAsync(string assetId)
@@ -66,5 +69,27 @@ namespace PlayGoodService.Services
 
             await _repository.DeleteAssetAsync(assetId);
         }
+
+        public void UpdateAssetFields(AssetMetadata existingAsset, AssetMetadata updatedAsset)
+        {
+            if (existingAsset == null || updatedAsset == null)
+            {
+                throw new ArgumentNullException("Asset metadata cannot be null.");
+            }
+
+            existingAsset.Name = updatedAsset.Name;
+            existingAsset.Description = updatedAsset.Description;
+            existingAsset.FileFormat = updatedAsset.FileFormat;
+            existingAsset.FileSize = updatedAsset.FileSize;
+            existingAsset.Path = updatedAsset.Path;
+            existingAsset.CreatedBy = updatedAsset.CreatedBy;
+            existingAsset.VersionNumber = updatedAsset.VersionNumber;
+            existingAsset.Timestamp = updatedAsset.Timestamp;
+            existingAsset.UserName = updatedAsset.UserName;
+            existingAsset.Comments = updatedAsset.Comments;
+            existingAsset.Preview = updatedAsset.Preview;
+            existingAsset.Status = updatedAsset.Status;
+        }
+
     }
 }

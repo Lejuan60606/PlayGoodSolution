@@ -49,8 +49,9 @@ namespace PlayGoodService.Services
                 throw new KeyNotFoundException("Briefing not found.");
             }
 
+            UpdateBriefingFields(existingBriefing, Briefing);
             _logger.LogInformation($"Updating Briefing {BriefingId}");
-            await _repository.UpdateBriefingAsync(Briefing);
+            await _repository.UpdateBriefingAsync(existingBriefing);
         }
 
         public async Task DeleteBriefingAsync(string BriefingId)
@@ -66,6 +67,21 @@ namespace PlayGoodService.Services
             }
 
             await _repository.DeleteBriefingAsync(BriefingId);
+        }
+
+        public void UpdateBriefingFields(BriefingMetadata existingBrieting, BriefingMetadata updatedBriefing)
+        {
+            if (existingBrieting == null || updatedBriefing == null)
+            {
+                throw new ArgumentNullException("Asset briefing cannot be null.");
+            }
+
+            existingBrieting.Name = updatedBriefing.Name;
+            existingBrieting.Description = updatedBriefing.Description;         
+            existingBrieting.CreatedBy = updatedBriefing.CreatedBy;
+            existingBrieting.CreatedDate = updatedBriefing.CreatedDate;
+            existingBrieting.Comments = updatedBriefing.Comments;
+            existingBrieting.Status = updatedBriefing.Status;
         }
     }
 }
